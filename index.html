@@ -16,31 +16,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <script async src="./assets/js/navbar.js"></script>
 
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-brand">
-                <h1 class="navbar-titulo-texto">Nobre Perícias</h1>
+    <header>
+        <nav class="navbar">
+            <a class="nav-branding">Nobre Perícias</a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre-gradient">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contato">Contato</a>
+                </li>
+            </ul>
+
+            <div class="hamburguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
 
-            <button aria-controls="nav" aria-label="Links de navegação" class="menu" type="button">
-                <div class="linha"></div>
-                <div class="linha"></div>
-                <div class="linha"></div>
-            </button>
-
-            <ul id="nav" class="navlinks" aria-expanded="false">
-                <!-- <li><a href="#inicio">Início</a></li> -->
-                <li><a href="#inicio">Home</a></li>
-                <li><a href="#sobre-gradient">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
+    </header>
     <main>
         <section id="inicio" class="inicio">
             <div class="container-inicio">
@@ -72,17 +79,18 @@
 
                     <ul class="sobre-topicos-texto ">
                         <div>
-                            Fisioterapeuta Clínico, Fisioterapeuta Intensivista no Neonatal do HCCPG, Título de
-                            Láurea na formação, C.O em Osteopatia, Membro da Sociedade Brasileira para o Estudo da
-                            Dor(SBED), Referência nas Disfunções da Coluna Vertebral com o Método CBR e no
-                            Tratamento da escoliose, com o método Escoliose na Prática;
+                            Pós-graduado perícias fisioterapêuticas, Capacitado em perícias pelo método CZP,
+                            Fisioterapeuta capacitado em ergonomia, Intensivista no Neonatal do HCCPG, Título de Láurea
+                            na formação, C.O em Osteopatia, Membro da Sociedade Brasileira para o Estudo da Dor (SBED);
                         </div>
                         <div>
-                            Referência também na avaliação
-                            funcional e diagnóstico do paciente com dor; Expert no método Dry Needling(Agulhamento a
-                            seco). Atuando usando os melhores estudos científicos
-                            de reabilitação da coluna. Com a marca de mais de 1.000 pacientes reabilitados e de
-                            volta a vida normal!
+                            Referência nas Disfunções da Coluna Vertebral com o Método CBR e no Tratamento da escoliose.
+
+                        </div>
+                        <div>
+                            <br>
+                            <a class="botao-servicos-2" href="https://api.whatsapp.com/send?phone=5584988753233 "
+                                target="_blank ">ENTRE EM CONTATO</a>
                         </div>
                     </ul>
                 </section>
@@ -142,9 +150,8 @@
                 </li>
             </ul>
 
-            <a class="botao-servicos"
-                href="https://pay.hotmart.com/B46227104D?off=kfn7650j&checkoutMode=0&bid=1633656064169 "
-                target="_blank ">FALE CONOSCO</a>
+            <a class="botao-servicos-1" href="https://api.whatsapp.com/send?phone=5584988753233 " target="_blank ">FALE
+                CONOSCO</a>
 
 
         </section>
@@ -152,8 +159,10 @@
         <section id="solucoes" class="solucoes">
 
             <div class="container-solucoes">
+
                 <h1>SOLUÇÕES ERGONÔMICAS</h1>
-                <h2>Temos o compromisso com a diminuição dos riscos de doenças do trabalho e a taxa de absenteísmo através de soluções ergonômicas, sempre zelando pela economia e produtividade da sua empresa.</h2>
+                <h2>Temos o compromisso com a diminuição dos riscos de doenças do trabalho e a taxa de absenteísmo
+                    através de soluções ergonômicas, sempre zelando pela economia e produtividade da sua empresa.</h2>
             </div>
             <ul class="container-items">
                 <li class="box-items">
@@ -176,9 +185,8 @@
                 </li>
             </ul>
 
-            <a class="botao-servicos"
-                href="https://pay.hotmart.com/B46227104D?off=kfn7650j&checkoutMode=0&bid=1633656064169 "
-                target="_blank ">FAÇA UM ORÇAMENTO</a>
+            <a class="botao-servicos-1" href="https://api.whatsapp.com/send?phone=5584988753233 " target="_blank ">FAÇA
+                UM ORÇAMENTO</a>
     </main>
 
     <footer id="contato" class="footer">
@@ -225,8 +233,8 @@
             </div>
         </div>
     </footer>
+    <script src="./assets/js/navbar.js"></script>
 
-    <script async src="./assets/js/navbar.js"></script>
 </body>
 
 </html>
