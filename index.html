@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
@@ -16,40 +16,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
-    <script async src="./assets/js/navbar.js"></script>
 
 </head>
 
 <body>
     <header>
         <nav class="navbar">
-            <a class="nav-branding">Nobre Perícias</a>
+            <div class="container">
+                <div class="navbar-brand">
+                    <picture>
+                        <img src="./assets/img/logo-menu.png" alt="Logo Carlos Nobre - FisioForense" />
+                    </picture>
+                </div>
+                <button aria-controls="nav" aria-label="Links de navegação" class="menu" type="button">
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                </button>
 
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a class="nav-link" href="#inicio">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobre-gradient">Sobre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#servicos">Serviços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contato">Contato</a>
-                </li>
-            </ul>
-
-            <div class="hamburguer">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <ul id="nav" class="navlinks" aria-expanded="false">
+                    <li><a href="#inicio">HOME</a></li>
+                    <li><a href="#sobre-gradient">SOBRE</a></li>
+                    <li><a href="#servicos">SERVIÇOS</a></li>
+                    <li><a href="#solucoes">SOLUÇÕES</a></li>
+                </ul>
             </div>
-
         </nav>
     </header>
     <main>
         <section id="inicio" class="inicio">
+            <picture>
+                <source srcset="./assets/img/webp's/desk-cut.webp" type="image/webp" />
+                <img src="./assets/img/desk-cut.png" alt="Carlos Nobre Fisioterapeuta Forense" class="foto-bg-inicio-cut" />
+            </picture>
             <div class="container-inicio">
                 <h1>Comprometimento com a excelência!</h1>
                 <h2>
@@ -157,7 +156,10 @@
         </section>
 
         <section id="solucoes" class="solucoes">
-
+            <picture>
+                <source srcset="./assets/img/webp's/main-logo.webp" type="image/webp" />
+                <img src="./assets/img/main-logo.png" alt="Logo - Carlos Nobre Fisioterapeuta Forense" class="main-logo" />
+            </picture>
             <div class="container-solucoes">
 
                 <h1>SOLUÇÕES ERGONÔMICAS</h1>
@@ -233,7 +235,7 @@
             </div>
         </div>
     </footer>
-    <script src="./assets/js/navbar.js"></script>
+    <script async src="./assets/js/navbar.js"></script>
 
 </body>
 

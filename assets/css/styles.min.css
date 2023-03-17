@@ -9,10 +9,6 @@
     --primary-color: #efb815
 }
 
-header {
-    background-color: #f5f5f5;
-}
-
 body,
 button {
     pointer-events: all;
@@ -35,7 +31,7 @@ ul {
 }
 
 li {
-    list-style: none;
+    list-style: none
 }
 
 img {
@@ -54,57 +50,109 @@ section {
     width: 100%
 }
 
+.navbar {
+    background-color: #fff;
+    border-bottom: .0625rem solid rgba(68, 68, 68, .25);
+    height: 5rem;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999
+}
+
+.navbar .container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between
+}
+
+.navbar .navbar-brand {
+    align-items: center;
+    display: flex;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-left: .5rem;
+    text-transform: uppercase
+}
+
+.navbar .navbar-brand img {
+    display: block;
+    height: 3rem;
+    margin: 0
+}
+
+.navbar .navlinks {
+    display: none;
+    color: #212121;
+    font-size: 1rem;
+    font-weight: 400;
+    flex-basis: 100%;
+    height: 100%;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.navbar .navlinks li {
+    font-weight: 500;
+    display: flex;
+    justify-content: center
+}
+
+.navbar .navlinks li a {
+    margin-bottom: .5rem;
+    margin-top: 1.5rem
+}
+
+.menu {
+    background-color: transparent;
+    border: none
+}
+
+.linha {
+    background-color: #202020;
+    height: .25rem;
+    width: 1.875rem
+}
+
+.linha:nth-child(2) {
+    margin: 0.25rem 0px
+}
+
 main {
     display: flex;
     flex-direction: column;
+    margin-top: 3.5rem
 }
-
-.navbar {
-    min-height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-}
-
-.nav-branding {
-    font-size: 2rem;
-}
-
-.nav-link {
-    transition: 0.7s ease;
-}
-
-.hamburguer {
-    display: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition-all: 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #212121;
-}
-
 
 @media (min-width:576px) {
+    section {
+        min-height: 110vh
+    }
+
     .foto-em-pe-mobile {
         display: none !important
+    }
+
+    .navbar .navlinks li a {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        margin: 0;
+        padding: 0 .75rem;
+        transition: background-color .2s linear, color .2s linear
+    }
+
+    .navbar .navlinks li a:hover {
+        background-color: #ffdf82;
     }
 }
 
 .inicio {
+    background: #fac938;
+    background: linear-gradient(180deg, rgba(250, 201, 56, 1) 0, rgba(239, 184, 21, .19931722689075626) 100%);
     align-items: center;
     background-repeat: no-repeat;
     color: #fff;
@@ -114,7 +162,8 @@ main {
     overflow: hidden;
     padding: 4rem 0;
     position: initial;
-    text-align: center
+    text-align: center;
+    min-height: 110vh
 }
 
 .inicio .inicio-texto {
@@ -129,17 +178,23 @@ main {
 
 .inicio .foto-bg-inicio {
     display: none;
-    left: 0;
+    z-index: -1
+}
+
+.inicio .foto-bg-inicio-cut {
+    display: block;
+    left: -2%;
     position: absolute;
-    top: 8%;
-    width: 100%;
+    top: 70%;
+    width: 110%;
     z-index: -1
 }
 
 .container-inicio {
     color: #202020;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 200px;
+    margin-top: -200px;
     margin-left: auto;
     margin-right: auto;
     max-width: 62rem;
@@ -148,11 +203,15 @@ main {
 }
 
 .container-inicio h1 {
-    font-size: 25px
+    text-transform: uppercase;
+    font-family: Cardo, serif;
+    font-size: 35px;
+    height: 100%;
+    font-weight: 700
 }
 
 .container-inicio h2 {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 100;
     width: 100%;
     padding-top: 25px
@@ -173,6 +232,10 @@ main {
     opacity: 1
 }
 
+.sobre {
+    min-height: 80vh !important
+}
+
 @media (min-width:992px) {
     .inicio {
         background: #efb815;
@@ -180,6 +243,7 @@ main {
     }
 
     .container-inicio {
+        margin-top: 20px;
         margin-left: 14%;
         text-align: left;
         width: 50%
@@ -191,9 +255,7 @@ main {
     }
 
     .container-inicio h1 {
-        font-family: Cardo, serif;
         font-size: 60px;
-        text-transform: uppercase;
         width: 80%
     }
 
@@ -208,82 +270,31 @@ main {
 
     .inicio .foto-bg-inicio {
         display: block;
-        position: absolute
+        left: -30%;
+        position: absolute;
+        top: 0;
+        width: 150%
     }
 
-    .container-vantagens h2 {
-        font-size: 20px
-    }
-
-    .vantagens .vantagens-topicos-texto {
-        width: 60%
-    }
-
-    .vantagens .vantagens-bg {
-        display: block !important;
-        position: absolute !important
+    .inicio .foto-bg-inicio-cut {
+        display: none
     }
 }
 
-.vantagens {
-    align-items: center;
-    background: #303030;
-    background: linear-gradient(0deg, rgba(33, 33, 33, 1) 0, rgba(54, 54, 54, 1) 100%);
-    color: #fff;
-    overflow: hidden;
-    padding: 4rem 0;
-    position: relative;
-    text-align: center
-}
-
-.vantagens .vantagens-bg {
-    display: none;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1
-}
-
-.container-vantagens {
-    margin-top: 50px;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 35px;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 62rem;
-    padding: 0 1rem;
-    width: 100%
-}
-
-.container-vantagens h1 {
-    font-size: 25px
-}
-
-.container-vantagens h2 {
-    font-size: 16px;
-    font-weight: lighter
-}
-
-.vantagens .vantagens-topicos-texto {
-    width: 80%;
-    margin: 0 auto
-}
-
-.vantagens .vantagens-topicos-texto li {
-    text-align: center;
-    font-size: 17px;
-    font-weight: 200;
-    margin-top: 1rem;
-    padding: 0 1rem
+.main-logo {
+    padding-top: 40px;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    height: 50%rem;
 }
 
 .servicos {
+    background: #fac938;
     align-items: center;
     overflow: hidden;
     padding: 2rem 0;
-    position: relative;
+    position: initial;
     text-align: left
 }
 
@@ -291,7 +302,6 @@ main {
     margin-top: 20px;
     color: #212121;
     text-align: center;
-    margin-bottom: 35px;
     margin-left: auto;
     margin-right: auto;
     max-width: 62rem;
@@ -301,16 +311,20 @@ main {
 
 .container-servicos h1 {
     font-family: Cardo, serif;
-    font-size: 30px;
+    font-size: 40px;
     width: 80%;
     margin: 0 auto;
-    text-align: center
+    text-align: center;
+    font-weight: 700
 }
 
 .servicos .servicos-topicos-texto {
     list-style: none;
     width: 100%;
-    margin: 0 auto
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column
 }
 
 .servicos .servicos-topicos-texto h2 {
@@ -324,14 +338,15 @@ main {
 }
 
 .servicos .servicos-topicos-texto h3 {
-    font-family: Cardo, serif !important;
-    color: #323232;
+    opacity: .75;
     padding-bottom: 20px;
     font-size: 20px;
     margin: 0 auto;
     width: 100%;
     text-align: left;
-    font-style: italic
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: 100
 }
 
 .servicos .servicos-topicos-texto li {
@@ -339,7 +354,8 @@ main {
     text-align: justify;
     font-size: 18px;
     margin-top: 50px;
-    color: #212121
+    color: #212121;
+    font-weight: 100
 }
 
 .botao-servicos-1 {
@@ -350,7 +366,7 @@ main {
     box-shadow: 0 10px 16px 0 rgba(0, 0, 0, .5);
     display: flex;
     width: 85%;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 600;
     font-family: Cardo, serif;
     margin: 0 auto;
@@ -359,7 +375,8 @@ main {
     padding: .85rem;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     text-transform: uppercase;
     transition: .71s
 }
@@ -370,7 +387,6 @@ main {
     transition: .72s
 }
 
-
 .solucoes {
     font-family: Cardo, serif;
     align-items: center;
@@ -379,7 +395,7 @@ main {
     min-height: calc(100vh - 1rem);
     overflow: hidden;
     padding: 1rem 0;
-    position: relative;
+    position: initial;
     text-align: justify
 }
 
@@ -432,7 +448,19 @@ main {
 }
 
 .container-solucoes h1 {
-    font-size: 25px
+    font-size: 40px;
+    font-weight: 700
+}
+
+.container-solucoes h2 {
+    font-weight: 100;
+    padding-top: 30px;
+    font-size: 22px;
+    text-transform: uppercase;
+    opacity: .8;
+    width: 75%;
+    margin: 0 auto;
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .container-items {
@@ -464,18 +492,8 @@ main {
     margin-top: 0;
     padding: 1px;
     font-weight: 700;
-    font-size: 20px
-}
-
-.container-solucoes h1 {
-    font-size: 35px;
-    font-weight: 600
-}
-
-.container-solucoes h2 {
-    margin-top: 30px;
-    font-size: 18px;
-    font-weight: 600
+    font-size: 19px;
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .solucoes .solucoes-topicos-texto {
@@ -510,6 +528,11 @@ main {
 }
 
 @media (min-width:992px) {
+    .main-logo {
+        width: 20%;
+        height: 20%;
+    }
+
     #sobre-gradient {
         align-items: flex-end;
         display: flex
@@ -522,7 +545,20 @@ main {
 
     #sobre-gradient #sobre-foto-em-pe {
         display: block;
-        margin-left: 40%
+        margin-left: 25%
+    }
+}
+
+@media (min-width:1350px) {
+    .inicio .foto-bg-inicio {
+        left: 0;
+        top: 7.5%;
+        width: 100%
+    }
+
+    #sobre-gradient #sobre-foto-em-pe {
+        display: block;
+        margin-left: 33%
     }
 }
 
@@ -552,6 +588,11 @@ main {
     padding: 0 1rem
 }
 
+.sobre .sobre-topicos-texto div {
+    font-size: 20px;
+    font-weight: 200
+}
+
 @media (min-width:992px) {
     .sobre {
         text-align: left
@@ -561,31 +602,38 @@ main {
         margin-top: 20px;
         width: 75%;
         padding: 0;
-        font-size: 20px;
-        font-weight: 200
+        font-size: 20px
     }
 }
 
 @media (min-width:992px) {
-    .vantagens {
-        background: linear-gradient(0deg, rgba(33, 33, 33, .85) 0, rgba(54, 54, 54, .9) 100%)
-    }
-
-    .vantagens .vantagens-topicos-texto li {
-        padding: 0
-    }
-
-    .servicos {
-        background: rgb(239,184,21);
-        background: linear-gradient(350deg, rgba(239,184,21,1) 0%, rgba(255,213,89,1) 50%, rgba(239,184,21,1) 100%);
-}
-
     .servicos .servicos-topicos-texto li {
         padding: 0
     }
 }
 
+@media (max-width: 767px) {
+    .navbar .navlinks li a {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    .navbar.active {
+        height: auto
+    }
+    .navbar.active .navlinks {
+        display: block
+    }
+}
+
 @media (min-width:768px) {
+    .navbar .navlinks {
+        display: flex !important;
+        flex-basis: auto
+    }
+    .menu {
+        display: none !important
+    }
+
     .solucoes .solucoes-topicos-texto {
         width: 70%
     }
@@ -596,7 +644,7 @@ main {
         text-align: center;
         width: 70%;
         margin: 0 auto;
-        font-weight: 300
+        font-weight: 700
     }
 
     .servicos .servicos-topicos-texto h2 {
@@ -624,47 +672,15 @@ main {
 
     .botao-servicos-1 {
         width: 50%;
-        font-size: 22px
+        font-size: 25px
+    }
+
+    .botao-servicos-2 {
+        font-size: 25px
     }
 
     .servicos .botao {
         font-size: 1rem
-    }
-
-    .hamburguer {
-        display: block;
-    }
-
-    .hamburguer.active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburguer.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburguer.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        gap: 0;
-        flex-direction: column;
-        background-color: #f5f5f5;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-    }
-
-    .nav-item {
-        margin: 16px 0;
-    }
-
-    .nav-menu.active {
-        left: 0;
     }
 }
 
@@ -711,10 +727,6 @@ main {
 }
 
 @media (min-width:768px) {
-    .menu {
-        display: none !important
-    }
-
     .footer .footer-redes-sociais li a {
         height: 6.25rem;
         width: 6.25rem
