@@ -198,7 +198,7 @@ main {
 .container-inicio {
     color: #202020;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 400px;
     margin-left: auto;
     margin-right: auto;
     max-width: 62rem;
@@ -207,7 +207,6 @@ main {
 }
 
 .container-inicio h1 {
-    margin-top: 3.5vh;
     text-transform: uppercase;
     font-family: Cardo, serif;
     font-size: 28px;
