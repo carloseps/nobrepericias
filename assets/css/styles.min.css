@@ -5,6 +5,36 @@
     padding: 0
 }
 
+@keyframes slideInLeft{
+    from {
+        transform: translateX(-300px);
+      }
+    
+      to {
+        transform: translateX(0);
+      }
+}
+
+@keyframes slideInRight {
+    from {
+      transform: translateX(300px);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+}
+
+@keyframes slideInTop {
+    from {
+      transform: translateY(300px);
+    }
+  
+    to {
+      transform: translateY(0);
+    }
+}
+
 :root {
     --primary-color: #efb815
 }
@@ -187,6 +217,7 @@ main {
 }
 
 .inicio .foto-bg-inicio-cut {
+    animation: slideInTop 1.5s ease-in;
     display: block;
     left: 0;
     position: absolute;
@@ -226,7 +257,7 @@ main {
     bottom: 100% auto
 }
 
-.foto-em-pe-mobile {
+.foto-em-pe-mobile{
     margin: 0 auto;
     display: block;
     left: 0;
@@ -529,6 +560,36 @@ main {
 #sobre-gradient #sobre-foto-em-pe {
     display: none;
     width: 32rem
+}
+
+.bottom{
+    position: relative;
+    opacity: 0;
+}
+
+.bottom.active{
+    opacity: 1;
+    animation: slideInTop 1.2s ease-in;
+}
+
+.left{
+    position: relative;
+    opacity: 0;
+}
+
+.left.active{
+    opacity: 1;
+    animation: slideInLeft 1.2s ease-in;
+}
+
+.right{
+    position: relative;
+    opacity: 0;
+}
+
+.right.active{
+    opacity: 1;
+    animation: slideInRight 1s ease-in;
 }
 
 @media (min-width:992px) {
